@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{B4DDD58E-4F68-0D4F-59DF-E9F8275FC965}") = "THE REAL GHOST HOUSE", "Assembly-CSharp.csproj", "{ABA51CD0-A744-2138-9EF1-78B6DD250227}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABA51CD0-A744-2138-9EF1-78B6DD250227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA51CD0-A744-2138-9EF1-78B6DD250227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA51CD0-A744-2138-9EF1-78B6DD250227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA51CD0-A744-2138-9EF1-78B6DD250227}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
