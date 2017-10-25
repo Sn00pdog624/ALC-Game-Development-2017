@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\FlashLight.cs" />
      <Compile Include="Assets\Scripts\Ghost_AI.cs" />
      <Compile Include="Assets\Scripts\Player_Move.cs" />
  <Reference Include="UnityEngine.Networking">
