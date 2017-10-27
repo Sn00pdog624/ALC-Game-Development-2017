@@ -11,10 +11,10 @@ public class Ghost_AI : MonoBehaviour {
 	void OnTriggerStay(Collider other)
     {
 	    if(other.gameObject.name == "Player"){
-		   transform.LookAt(target);
-		transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
+			transform.LookAt(target);
+			transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
+		}
 	}
-}
 
 
   

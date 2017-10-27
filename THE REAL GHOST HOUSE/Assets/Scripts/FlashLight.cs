@@ -1,29 +1,32 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class FlashLight : MonoBehaviour {
 
-public bool lightOn;
-Light Light;
+	public bool lightOn;
 
-void Start () {
-	light = GetComponent<Light> ();
-	lightOn = true;
-	light.enabled = true;
-}
+	Light light;
 
-void Update () {
-	if (Imput.GetKeyUp (KeyCode.l) && lighton) {
-		lightOn = false;
-		light.enabled = false;
-
-
-	}
-
-	else if (Imput.GetKeyUp (KeyCode.L) && !lightOn){
+	// Use this for initializtion
+	void Start () {
+		light = GetComponent<Light> ();
+		// Set Light default to ON
 		lightOn = true;
 		light.enabled = true;
-	     }
+	}
+
+	void Update () {
+		if (Input.GetKeyUp (KeyCode.L) && lightOn) {
+			lightOn = false;
+			light.enabled = false;
+
+		}
+
+		else if (Input.GetKeyUp (KeyCode.L) && !lightOn){
+			lightOn = true;
+			light.enabled = true;
+
+	    }
     }
 }
