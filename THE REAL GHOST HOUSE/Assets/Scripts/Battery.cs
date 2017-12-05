@@ -3,9 +3,10 @@ using System.Collections;
 
 public class Battery : MonoBehaviour {
 
-	public int power = 4;
+		public int power = 4;
 
 	public GameObject flashlight;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -20,8 +21,7 @@ public class Battery : MonoBehaviour {
 		if(other.gameObject.tag == "Player"){
 			flashlight.gameObject.GetComponentInChildren<FlashLight>().currentPower = power;
 			Destroy(gameObject);
-
 		}
-	}
+}	
 
 }
