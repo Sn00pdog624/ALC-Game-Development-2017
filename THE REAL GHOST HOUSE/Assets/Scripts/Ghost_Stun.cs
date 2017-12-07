@@ -33,7 +33,7 @@ bool lightCheck;
 			//  other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 			//  other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-			other.GetComponent<GhostAI>().moveSpeed = 0f;
+			other.GetComponent<Ghost_AI>().moveSpeed = 0f;
 			StartCoroutine(Wait(5, other));
 			// StopCoroutine(Wait(5));
 			
@@ -42,7 +42,7 @@ bool lightCheck;
 	
 	IEnumerator Wait(float time, Collider other){
 			yield return new WaitForSeconds(time);
-			other.gameObject.GetComponent<GhostAI>().moveSpeed = 5f;
+			other.gameObject.GetComponent<Ghost_AI>().moveSpeed = 5f;
 			print("Ghost is unstunned");
 			
 }

@@ -22,6 +22,6 @@ public class Battery : MonoBehaviour {
 			flashlight.gameObject.GetComponentInChildren<FlashLight>().currentPower = power;
 			Destroy(gameObject);
 		}
-}	
+	}	
 
 }
