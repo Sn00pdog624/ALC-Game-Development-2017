@@ -2,28 +2,29 @@
 using System.Collections;
 
 public class Smooth_Camera : MonoBehaviour {
-	[SerializeField]Transform target;
-	[SerializeField]Vector3 defaultDistance = new Vector3(0f, 2f, -10f);
-	[SerializeField]float distanceDamp = 10f;
-	[SerializeField]float rotationalDamp = 10f;
+	public Transform target;
+	public Vector3 defaultDistance = new Vector3(0f,0f,-10f);
+	public float distDamp = 10f;
+	public float rotDamp = 10f;
 
+	Transform myTrans;
 
-	Transform myT;
-
-	void Awake()
-	{
-		myT = transform;
+	// Use this for initialization
+	void Awake () {
+		myTrans = transform;
 	}
+	
+	// Update is called once per frame
+	void LateUpdate () {
 
+		//Change camera postion
+		Vector3 toPos =  target.position + (target.rotation * defaultDistance);
+		Vector3 curPos = Vector3.Lerp(myTrans.position, toPos, distDamp * Time.deltaTime);
+		myTrans.position = curPos;
 
-	void LateUpdate()
-	{
-		Vector3 toPos = target.position + (target.rotation * defaultDistance);
-		Vector3 curPos = Vector3.Lerp(myT.position, toPos, distanceDamp * Time.deltaTime);
-		myT.position = curPos;
-
-		Quaternion toRot = Quaternion.LookRotation(target.rotation * defaultDistance);
-		Quaternion curRot = Quaternion.Slerp(myT.position, toPos, distanceDamp * Time.deltaTime);
-		myT.rotation = curRot;
+		//Change camera rotation
+		Quaternion toRot =  Quaternion.LookRotation(target.position - myTrans.position, target.up);
+		Quaternion curRot = Quaternion.Slerp(myTrans.rotation, toRot, distDamp * Time.deltaTime);
+		myTrans.rotation = curRot;
 	}
 }

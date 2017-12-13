@@ -3,13 +3,17 @@ using System.Collections;
 
 public class Battery : MonoBehaviour {
 
-		public int power = 4;
+	public int power = 4;
 
 	public GameObject flashlight;
 
+	GameObject player;
+
 	// Use this for initialization
 	void Start () {
-	
+		player =  GameObject.FindWithTag("Player");
+
+		flashlight = player;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +26,6 @@ public class Battery : MonoBehaviour {
 			flashlight.gameObject.GetComponentInChildren<FlashLight>().currentPower = power;
 			Destroy(gameObject);
 		}
-	}	
+	}
 
 }
