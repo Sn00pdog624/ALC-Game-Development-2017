@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Battery.cs" />
+     <Compile Include="Assets\Scripts\Battery_Respawn.cs" />
      <Compile Include="Assets\Scripts\FlashLight.cs" />
      <Compile Include="Assets\Scripts\Ghost_AI.cs" />
      <Compile Include="Assets\Scripts\Ghost_Stun.cs" />
